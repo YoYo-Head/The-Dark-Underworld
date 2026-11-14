@@ -34,18 +34,19 @@ animations = [{
 script = ExtResource("1_g14uk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125541277]
+y_sort_enabled = true
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_ih6pl")
-disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1725984692]
 zoom = Vector2(5, 5)
 position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1896573092]
+y_sort_enabled = true
 position = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_23vcb")
-frame_progress = 0.8459882
+frame_progress = 0.025814964
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=290390909]
 stream = ExtResource("6_dc2ln")
