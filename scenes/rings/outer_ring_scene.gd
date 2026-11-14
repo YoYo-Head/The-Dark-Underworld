@@ -7,13 +7,10 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
-	
-	
 
-
-func _on_next_ring_area_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+func _on_next_ring_area_area_entered(_area: Area2D) -> void:
 	print("test")
 	
 	get_tree().change_scene_to_file("res://scenes/rings/middle_ring_scene.tscn")

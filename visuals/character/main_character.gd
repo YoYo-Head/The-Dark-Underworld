@@ -3,6 +3,9 @@ extends CharacterBody2D
 var speed = 30
 var playingSound = false
 
+@export var maxhealth = 500
+@onready var currentHealth: int = 500
+
 
 func _physics_process(delta: float) -> void:
 	handle_input()
