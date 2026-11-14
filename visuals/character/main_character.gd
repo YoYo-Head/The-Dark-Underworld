@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var speed = 30
+var playingSound = false
 
 
 func _physics_process(delta: float) -> void:
@@ -14,9 +15,16 @@ func handle_input():
 	velocity = moveDirection * speed
 	
 	if velocity.length() > 0:
+		if playingSound == false:
+			$AudioStreamPlayer2D.play()
+			playingSound = true
+			
 		$AnimatedSprite2D.play()
+			
 	else:
 		$AnimatedSprite2D.stop()
+		$AudioStreamPlayer2D.stop()
+		playingSound = false
 	
 
 
@@ -38,3 +46,7 @@ func switch_gender(type: int):
 	
 	
 	
+
+
+func _on_audio_stream_player_2d_finished() -> void:
+	playingSound = false
