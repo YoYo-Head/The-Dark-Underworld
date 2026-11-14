@@ -1,11 +1,5 @@
-class_name enemy
-extends CharacterBody2D
+extends Control
 
-@export var boss_id: int
-@export var boss_name: String
-@export var damage: int
-@export var maxhealth: int
-@export var speed: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
