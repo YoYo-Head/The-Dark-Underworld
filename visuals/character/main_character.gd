@@ -6,11 +6,17 @@ var speed = 30
 func _physics_process(delta: float) -> void:
 	handle_input()
 	
+	
 	move_and_slide()
 	
 func handle_input():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = moveDirection * speed
+	
+	if velocity.length() > 0:
+		$AnimatedSprite2D.play()
+	else:
+		$AnimatedSprite2D.stop()
 	
 
 
