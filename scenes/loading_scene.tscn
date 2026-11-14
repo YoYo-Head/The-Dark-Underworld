@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://cci2u60fe8bgw"]
 
-[node name="Node2D" type="Container" unique_id=1312365040]
+[node name="loading_screen_container" type="Container" unique_id=1312365040]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2027078631]
+layout_mode = 2

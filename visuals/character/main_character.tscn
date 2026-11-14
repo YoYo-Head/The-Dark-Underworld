@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://bohfkmb3fxk6g"]
 
+[ext_resource type="Script" uid="uid://dx75m1cdster1" path="res://visuals/character/main_character.gd" id="1_g14uk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih6pl"]
+size = Vector2(31, 47)
+
 [node name="MainCharacter" type="CharacterBody2D" unique_id=1542135557]
+script = ExtResource("1_g14uk")
+
+[node name="male" type="Sprite2D" parent="." unique_id=976841119]
+
+[node name="female" type="Sprite2D" parent="." unique_id=717406054]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125541277]
+position = Vector2(43.5, 35.5)
+shape = SubResource("RectangleShape2D_ih6pl")
+disabled = true
