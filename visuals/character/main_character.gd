@@ -4,7 +4,10 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var gender
+var gender_sprites = {
+	"male": $male,
+	"female": $female
+}
 
 
 func _physics_process(delta: float) -> void:
@@ -26,5 +29,20 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-func swicth_gender:
+func switch_gender(type: int):
+	# 0: female
+	# 1: male
+	
+	if type == 0:
+		# female character
+		gender_sprites["male"].visibility = false
+		gender_sprites["female"].visibility = true
+	else:
+		# male character
+		gender_sprites["female"].visibility = false
+		gender_sprites["male"].visibility = true
+		
+		
+	
+	
 	
