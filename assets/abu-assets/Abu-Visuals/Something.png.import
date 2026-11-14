@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqkcra4suj3p6"
-path="res://.godot/imported/Home-Page.png-7e7303e5dd9f83ce7d96cde61e49f247.ctex"
+uid="uid://kf1dabgay37x"
+path="res://.godot/imported/Something.png-e0dd7301d143d34ba603d9851c79c819.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/abu-assets/Home-Page.png"
-dest_files=["res://.godot/imported/Home-Page.png-7e7303e5dd9f83ce7d96cde61e49f247.ctex"]
+source_file="res://assets/abu-assets/Abu-Visuals/Something.png"
+dest_files=["res://.godot/imported/Something.png-e0dd7301d143d34ba603d9851c79c819.ctex"]
 
 [params]
 
