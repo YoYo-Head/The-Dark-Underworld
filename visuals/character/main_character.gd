@@ -2,16 +2,26 @@ extends CharacterBody2D
 
 var speed = 30
 var playingSound = false
+var knockback_velocity: Vector2 = Vector2.ZERO
 
-@export var maxhealth = 500
-@onready var currentHealth: int = 500
+var isDead = false
 
+@export var maxHealth = 10
+@onready var currentHealth: int = 10
 
 func _physics_process(delta: float) -> void:
 	handle_input()
 	
+	velocity += knockback_velocity
+
+	knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
+	
+	if currentHealth <= 0:
+		isDead = true
 	
 	move_and_slide()
+	
+	on_death()
 	
 func handle_input():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -45,11 +55,24 @@ func switch_gender(type: int):
 		gender_sprites["female"].visibility = false
 		gender_sprites["male"].visibility = true
 		"""	
-		
-	
-	
-	
-
 
 func _on_audio_stream_player_2d_finished() -> void:
 	playingSound = false
+	
+func apply_knockback(force: Vector2) -> void:
+	knockback_velocity = force
+	
+func teleport(coord: Vector2):
+	global_position = coord
+	
+	
+func on_death():
+	if not isDead:
+		return
+		
+	isDead = false
+	
+	teleport(Vector2(50, 50))
+	
+	currentHealth = maxHealth
+	

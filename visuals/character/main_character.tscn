@@ -31,6 +31,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ih6pl"]
 size = Vector2(14.5, 7)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pea23"]
+size = Vector2(20, 11)
+
 [node name="MainCharacter" type="CharacterBody2D" unique_id=1542135557]
 y_sort_enabled = true
 script = ExtResource("1_g14uk")
@@ -61,5 +64,9 @@ scale = Vector2(0.26708752, 0.26708752)
 y_sort_enabled = true
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_ih6pl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001421742]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_pea23")
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

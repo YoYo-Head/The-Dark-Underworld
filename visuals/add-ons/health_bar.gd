@@ -5,14 +5,14 @@ var parent
 func _ready() -> void:
 	parent = get_parent()
 
-	max_value = parent.maxhealth
+	max_value = parent.maxHealth
 	value = parent.currentHealth
 
 func _process(_delta: float) -> void:
 	if parent == null:
 		return
 
-	max_value = parent.maxhealth
+	max_value = parent.maxHealth
 	value = parent.currentHealth
 	"""
 	if parent.currentHealth < parent.maxhealth:
