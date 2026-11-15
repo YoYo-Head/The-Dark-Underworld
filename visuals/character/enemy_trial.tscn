@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://miaew01vcf15"]
+
+[ext_resource type="Script" uid="uid://dgc1g7u8j076" path="res://visuals/character/enemy_trial.gd" id="1_t8mbh"]
+[ext_resource type="Texture2D" uid="uid://djdxadb4dq7j" path="res://assets/images/male_animations/walking one-1.png.png" id="2_1l1m6"]
+[ext_resource type="Texture2D" uid="uid://k1op06gppmvr" path="res://assets/images/male_animations/walking one-2.png.png" id="3_vq2ip"]
+[ext_resource type="Texture2D" uid="uid://cv7f1s865qbsl" path="res://assets/images/male_animations/walking one-3.png.png" id="4_wvih3"]
+[ext_resource type="Texture2D" uid="uid://bfen7xvsc86ba" path="res://assets/images/male_animations/walking one-4.png.png" id="5_2kbui"]
+[ext_resource type="PackedScene" uid="uid://dwer7a3mp75un" path="res://visuals/add-ons/health_bar.tscn" id="7_urc01"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_23vcb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1l1m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vq2ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wvih3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2kbui")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih6pl"]
+size = Vector2(14.5, 7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ih6pl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pea23"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pea23"]
+
+[node name="enemy" type="CharacterBody2D" unique_id=1542135557 node_paths=PackedStringArray("sight_area", "damage_area")]
+y_sort_enabled = true
+script = ExtResource("1_t8mbh")
+sight_area = NodePath("sight")
+damage_area = NodePath("damageRadius")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1896573092]
+y_sort_enabled = true
+position = Vector2(-1, -13)
+sprite_frames = SubResource("SpriteFrames_23vcb")
+frame_progress = 0.025814964
+
+[node name="HealthBar" parent="." unique_id=1339644606 instance=ExtResource("7_urc01")]
+offset_left = -8.000004
+offset_top = -36.0
+offset_right = 62.999996
+offset_bottom = -9.0
+scale = Vector2(0.26708752, 0.26708752)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=381738756]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2125541277]
+y_sort_enabled = true
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_ih6pl")
+
+[node name="sight" type="Area2D" parent="." unique_id=1492034864]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sight" unique_id=2066374994]
+position = Vector2(-1.9073486e-06, -9)
+scale = Vector2(3.102358, 3.0970387)
+shape = SubResource("CircleShape2D_ih6pl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=944705870]
+position = Vector2(0, -7.000001)
+scale = Vector2(0.80274135, 0.4247245)
+shape = SubResource("RectangleShape2D_pea23")
+
+[node name="damageRadius" type="Area2D" parent="." unique_id=1272325395]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damageRadius" unique_id=1648129884]
+position = Vector2(0.99999994, -13.000001)
+scale = Vector2(1.507332, 1.507332)
+shape = SubResource("CircleShape2D_pea23")
