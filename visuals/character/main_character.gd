@@ -6,8 +6,8 @@ var knockback_velocity: Vector2 = Vector2.ZERO
 
 var isDead = false
 
-@export var maxHealth = 10
-@onready var currentHealth: int = 10
+@export var maxHealth = 30
+@onready var currentHealth: int = 30
 
 func _physics_process(delta: float) -> void:
 	handle_input()

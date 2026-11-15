@@ -67,7 +67,7 @@ func give_damage():
 	target.currentHealth -= damage
 	
 	stopMovement = true
-	target.apply_knockback(direction * 400)
+	target.apply_knockback(direction * 100)
 	
 	await get_tree().create_timer(1.0).timeout
 	

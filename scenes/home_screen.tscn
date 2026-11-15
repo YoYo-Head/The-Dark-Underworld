@@ -49,32 +49,32 @@ texture_normal = ExtResource("3_ih2x6")
 
 [node name="Start" type="Label" parent="." unique_id=1044282333]
 layout_mode = 0
-offset_left = 3995.5505
-offset_top = 1517.6223
-offset_right = 5100.238
-offset_bottom = 1995.6223
+offset_left = 3963.9548
+offset_top = 1529.3351
+offset_right = 5068.642
+offset_bottom = 2007.3351
 scale = Vector2(0.7722519, 0.7722519)
 mouse_filter = 0
 theme_override_font_sizes/font_size = 350
 text = "BEGIN"
 
-[node name="Start2" type="Label" parent="." unique_id=1723721837]
+[node name="Controls" type="Label" parent="." unique_id=1723721837]
 layout_mode = 0
-offset_left = 3900.3723
-offset_top = 2868.925
-offset_right = 5255.372
-offset_bottom = 3346.925
+offset_left = 3855.5132
+offset_top = 2864.91
+offset_right = 5210.513
+offset_bottom = 3342.91
 scale = Vector2(0.7722519, 0.7722519)
 mouse_filter = 0
 theme_override_font_sizes/font_size = 350
 text = "Settings"
 
-[node name="Start3" type="Label" parent="." unique_id=1455911413]
+[node name="Settings" type="Label" parent="." unique_id=1455911413]
 layout_mode = 0
-offset_left = 3893.7405
-offset_top = 2180.5574
-offset_right = 5322.74
-offset_bottom = 2658.5574
+offset_left = 3853.1726
+offset_top = 2176.5417
+offset_right = 5282.173
+offset_bottom = 2654.5417
 scale = Vector2(0.7722519, 0.7722519)
 mouse_filter = 0
 theme_override_font_sizes/font_size = 350
