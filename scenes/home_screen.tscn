@@ -1,3 +1,50 @@
 [gd_scene format=3 uid="uid://doo7smc60xwrr"]
 
-[node name="HomeScreen" type="Container" unique_id=1637605829]
+[ext_resource type="Script" uid="uid://ddxeba2r63yqo" path="res://scenes/home_screen.gd" id="1_tjifo"]
+[ext_resource type="Texture2D" uid="uid://dqkcra4suj3p6" path="res://assets/abu-assets/Abu-Visuals/home-page/Home-Page.png" id="2_bie51"]
+[ext_resource type="Texture2D" uid="uid://b5dfgu1a3odmq" path="res://assets/abu-assets/Abu-Visuals/home-page/Start BUTTON UI.png" id="3_ih2x6"]
+
+[node name="HomeScreen" type="Control" unique_id=923902017]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1080.0
+offset_bottom = -750.0
+scale = Vector2(2.5636017, 2.9882267)
+script = ExtResource("1_tjifo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1825935113]
+layout_mode = 0
+offset_right = 321.0
+offset_bottom = 242.0
+scale = Vector2(27.131199, 19.068035)
+texture = ExtResource("2_bie51")
+
+[node name="StartButton" type="Button" parent="." unique_id=121072366]
+layout_mode = 0
+offset_left = 3433.8406
+offset_top = 1417.5632
+offset_right = 5856.213
+offset_bottom = 2037.3289
+theme_override_font_sizes/font_size = 400
+text = "BEGIN"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1567242539]
+layout_mode = 0
+offset_left = 3438.1316
+offset_top = 1415.5553
+offset_right = 3538.1316
+offset_bottom = 1447.5553
+scale = Vector2(19.262634, 19.262634)
+texture_normal = ExtResource("3_ih2x6")
+
+[node name="Label" type="Label" parent="TextureButton" unique_id=1044282333]
+layout_mode = 0
+offset_left = 20.149158
+offset_top = 3.978378
+offset_right = 96.149155
+offset_bottom = 38.97838
+scale = Vector2(0.7722519, 0.7722519)
+mouse_filter = 0
+theme_override_font_sizes/font_size = 25
+text = "BEGIN"
