@@ -22,60 +22,72 @@ texture = ExtResource("2_bie51")
 
 [node name="StartButton" type="TextureButton" parent="." unique_id=1567242539]
 layout_mode = 0
-offset_left = 3438.1316
-offset_top = 1415.5553
-offset_right = 3538.1316
-offset_bottom = 1447.5553
+offset_left = 3451.0044
+offset_top = 1645.7924
+offset_right = 3551.0044
+offset_bottom = 1677.7924
 scale = Vector2(19.262634, 19.262634)
 texture_normal = ExtResource("3_ih2x6")
 
 [node name="TextureButton2" type="TextureButton" parent="." unique_id=1601904467]
 layout_mode = 0
-offset_left = 3451.3936
-offset_top = 2754.476
-offset_right = 3551.3936
-offset_bottom = 2786.476
+offset_left = 3463.0964
+offset_top = 2996.7605
+offset_right = 3563.0964
+offset_bottom = 3028.7605
 scale = Vector2(19.262634, 19.262634)
 texture_normal = ExtResource("3_ih2x6")
 
 [node name="TextureButton3" type="TextureButton" parent="." unique_id=200298722]
 layout_mode = 0
-offset_left = 3446.7126
-offset_top = 2074.809
-offset_right = 3546.7126
-offset_bottom = 2106.809
+offset_left = 3464.2666
+offset_top = 2315.0857
+offset_right = 3564.2666
+offset_bottom = 2347.0857
 scale = Vector2(19.262634, 19.262634)
 texture_normal = ExtResource("3_ih2x6")
 
 [node name="Start" type="Label" parent="." unique_id=1044282333]
 layout_mode = 0
-offset_left = 3995.5505
-offset_top = 1517.6223
-offset_right = 5100.238
-offset_bottom = 1995.6223
+offset_left = 3963.9536
+offset_top = 1779.6506
+offset_right = 5068.6406
+offset_bottom = 2257.6506
 scale = Vector2(0.7722519, 0.7722519)
 mouse_filter = 0
 theme_override_font_sizes/font_size = 350
 text = "BEGIN"
 
-[node name="Start2" type="Label" parent="." unique_id=1723721837]
+[node name="Settings" type="Label" parent="." unique_id=1723721837]
 layout_mode = 0
-offset_left = 3900.3723
-offset_top = 2868.925
-offset_right = 5255.372
-offset_bottom = 3346.925
+offset_left = 3867.2158
+offset_top = 3085.1074
+offset_right = 5222.216
+offset_bottom = 3563.1074
 scale = Vector2(0.7722519, 0.7722519)
 mouse_filter = 0
 theme_override_font_sizes/font_size = 350
 text = "Settings"
 
-[node name="Start3" type="Label" parent="." unique_id=1455911413]
+[node name="Controls" type="Label" parent="." unique_id=1455911413]
 layout_mode = 0
-offset_left = 3893.7405
-offset_top = 2180.5574
-offset_right = 5322.74
-offset_bottom = 2658.5574
+offset_left = 3853.1726
+offset_top = 2426.8572
+offset_right = 5282.173
+offset_bottom = 2904.8572
 scale = Vector2(0.7722519, 0.7722519)
 mouse_filter = 0
 theme_override_font_sizes/font_size = 350
 text = "Controls"
+
+[node name="Controls2" type="Label" parent="." unique_id=974284826]
+layout_mode = 0
+offset_left = 1697.6116
+offset_top = 472.8557
+offset_right = 8854.611
+offset_bottom = 1708.8557
+scale = Vector2(0.7722519, 0.7722519)
+mouse_filter = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 900
+text = "Grimmy's Deal 🂱"
