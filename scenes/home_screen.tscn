@@ -20,16 +20,7 @@ offset_bottom = 242.0
 scale = Vector2(27.131199, 19.068035)
 texture = ExtResource("2_bie51")
 
-[node name="StartButton" type="Button" parent="." unique_id=121072366]
-layout_mode = 0
-offset_left = 3433.8406
-offset_top = 1417.5632
-offset_right = 5856.213
-offset_bottom = 2037.3289
-theme_override_font_sizes/font_size = 400
-text = "BEGIN"
-
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1567242539]
+[node name="StartButton" type="TextureButton" parent="." unique_id=1567242539]
 layout_mode = 0
 offset_left = 3438.1316
 offset_top = 1415.5553
@@ -38,13 +29,53 @@ offset_bottom = 1447.5553
 scale = Vector2(19.262634, 19.262634)
 texture_normal = ExtResource("3_ih2x6")
 
-[node name="Label" type="Label" parent="TextureButton" unique_id=1044282333]
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=1601904467]
 layout_mode = 0
-offset_left = 20.149158
-offset_top = 3.978378
-offset_right = 96.149155
-offset_bottom = 38.97838
+offset_left = 3451.3936
+offset_top = 2754.476
+offset_right = 3551.3936
+offset_bottom = 2786.476
+scale = Vector2(19.262634, 19.262634)
+texture_normal = ExtResource("3_ih2x6")
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=200298722]
+layout_mode = 0
+offset_left = 3446.7126
+offset_top = 2074.809
+offset_right = 3546.7126
+offset_bottom = 2106.809
+scale = Vector2(19.262634, 19.262634)
+texture_normal = ExtResource("3_ih2x6")
+
+[node name="Start" type="Label" parent="." unique_id=1044282333]
+layout_mode = 0
+offset_left = 3995.5505
+offset_top = 1517.6223
+offset_right = 5100.238
+offset_bottom = 1995.6223
 scale = Vector2(0.7722519, 0.7722519)
 mouse_filter = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 350
 text = "BEGIN"
+
+[node name="Start2" type="Label" parent="." unique_id=1723721837]
+layout_mode = 0
+offset_left = 3900.3723
+offset_top = 2868.925
+offset_right = 5255.372
+offset_bottom = 3346.925
+scale = Vector2(0.7722519, 0.7722519)
+mouse_filter = 0
+theme_override_font_sizes/font_size = 350
+text = "Settings"
+
+[node name="Start3" type="Label" parent="." unique_id=1455911413]
+layout_mode = 0
+offset_left = 3893.7405
+offset_top = 2180.5574
+offset_right = 5322.74
+offset_bottom = 2658.5574
+scale = Vector2(0.7722519, 0.7722519)
+mouse_filter = 0
+theme_override_font_sizes/font_size = 350
+text = "Controls"
