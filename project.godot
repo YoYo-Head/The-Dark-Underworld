@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Dark Underworld"
-run/main_scene="uid://b36sq3xghufql"
+run/main_scene="uid://doo7smc60xwrr"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

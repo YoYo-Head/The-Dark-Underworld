@@ -2367,6 +2367,7 @@ tile_set = SubResource("TileSet_23vcb")
 visibility_layer = 2
 position = Vector2(34, 147)
 scale = Vector2(0.76888096, 0.7435449)
-maxhealth = null
+allowInput = true
+showBar = true
 
 [connection signal="area_entered" from="nextRingArea" to="." method="_on_next_ring_area_area_entered"]

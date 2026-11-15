@@ -6,11 +6,21 @@ var knockback_velocity: Vector2 = Vector2.ZERO
 
 var isDead = false
 
+@export var allowInput = false
+@export var showBar = false
+
 @export var maxHealth = 10
 @onready var currentHealth: int = 10
 
 func _physics_process(delta: float) -> void:
-	handle_input()
+	
+	if not showBar:
+		$HealthBar.visible = false
+	else:
+		$HealthBar.visible = true
+	
+	if allowInput:
+		handle_input()
 	
 	velocity += knockback_velocity
 

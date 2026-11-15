@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://odobwemk5dof"]
+
+[ext_resource type="Script" uid="uid://cagiy7fg6b7hd" path="res://visuals/add-ons/dialogue.gd" id="1_6xvvh"]
+[ext_resource type="Texture2D" uid="uid://bct6garrxdvde" path="res://assets/images/Untitled design (1).png" id="2_lww2q"]
+
+[node name="Dialogue" type="Control" unique_id=1676656825]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xvvh")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1424171633]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 567.0
+offset_right = 967.0
+offset_bottom = 767.0
+scale = Vector2(0.96477485, 0.67552096)
+texture = ExtResource("2_lww2q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1830503564]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 591.00006
+offset_right = 699.0
+offset_bottom = 640.00006
+scale = Vector2(1.3666335, 1.2575994)
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1565154697]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "test"
+autowrap_mode = 2

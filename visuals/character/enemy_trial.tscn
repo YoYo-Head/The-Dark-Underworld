@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://k1op06gppmvr" path="res://assets/images/male_animations/walking one-2.png.png" id="3_vq2ip"]
 [ext_resource type="Texture2D" uid="uid://cv7f1s865qbsl" path="res://assets/images/male_animations/walking one-3.png.png" id="4_wvih3"]
 [ext_resource type="Texture2D" uid="uid://bfen7xvsc86ba" path="res://assets/images/male_animations/walking one-4.png.png" id="5_2kbui"]
+[ext_resource type="Texture2D" uid="uid://dpqybgt45p6ko" path="res://assets/images/Alert_Sign.png" id="7_f7w3e"]
 [ext_resource type="PackedScene" uid="uid://dwer7a3mp75un" path="res://visuals/add-ons/health_bar.tscn" id="7_urc01"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_23vcb"]
@@ -80,3 +81,12 @@ shape = SubResource("RectangleShape2D_pea23")
 position = Vector2(0.99999994, -13.000001)
 scale = Vector2(1.507332, 1.507332)
 shape = SubResource("CircleShape2D_pea23")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=275600684]
+visible = false
+offset_left = -12.0
+offset_top = -64.0
+offset_right = 1588.0
+offset_bottom = 1536.0
+scale = Vector2(0.014941473, 0.014941473)
+texture = ExtResource("7_f7w3e")
