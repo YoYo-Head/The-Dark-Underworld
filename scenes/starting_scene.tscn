@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c0qu7kh21itc7" path="res://assets/images/images (2).jpg" id="2_ileah"]
 [ext_resource type="PackedScene" uid="uid://bohfkmb3fxk6g" path="res://visuals/character/main_character.tscn" id="3_8rk36"]
 [ext_resource type="PackedScene" uid="uid://odobwemk5dof" path="res://visuals/add-ons/dialogue.tscn" id="4_oemso"]
+[ext_resource type="PackedScene" uid="uid://bcr4qgynnlidm" path="res://visuals/character/grim_reaper.tscn" id="5_ileah"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eq0bj"]
 texture = ExtResource("2_ileah")
@@ -1196,10 +1197,17 @@ tile_set = SubResource("TileSet_ih6pl")
 
 [node name="MainCharacter" parent="." unique_id=1542135557 instance=ExtResource("3_8rk36")]
 position = Vector2(443, 392)
+allowInput = null
+showBar = null
+maxHealth = null
 
 [node name="Dialogue" parent="." unique_id=1676656825 instance=ExtResource("4_oemso")]
-offset_left = 438.00003
-offset_top = 941.0
-offset_right = 438.00003
-offset_bottom = 941.0
-scale = Vector2(1198.2251, 1198.2251)
+offset_left = 340.0
+offset_top = 314.00003
+offset_right = 340.0
+offset_bottom = 314.00003
+scale = Vector2(0.20588773, 0.20588773)
+
+[node name="GrimReaper" parent="." unique_id=686877873 instance=ExtResource("5_ileah")]
+visible = false
+position = Vector2(442, 351)

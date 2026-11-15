@@ -1,6 +1,8 @@
 class_name enemy
 extends CharacterBody2D
 
+signal enemy_died
+
 @export var boss_id: int
 @export var boss_name: String
 @export var damage: int
@@ -78,6 +80,8 @@ func on_death():
 		return
 
 	isDead = true
+	
+	enemy_died.emit()
 
 	velocity = Vector2.ZERO
 

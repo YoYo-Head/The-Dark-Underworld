@@ -4,6 +4,8 @@ var parent
 
 func _ready() -> void:
 	parent = get_parent()
+	
+	print(parent.name)
 
 	max_value = parent.maxHealth
 	value = parent.currentHealth

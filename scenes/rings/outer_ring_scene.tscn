@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bbmfnmn5ea2g4" path="res://assets/images/tilesets_terrain_0000_20260217_001433.png" id="4_laadn"]
 [ext_resource type="PackedScene" uid="uid://miaew01vcf15" path="res://visuals/character/enemy_trial.tscn" id="6_rvrru"]
 [ext_resource type="AudioStream" uid="uid://c11u5nmsm22wo" path="res://assets/sounds/atlasaudio-intense-intense-music-576640.mp3" id="7_rvrru"]
+[ext_resource type="PackedScene" uid="uid://odobwemk5dof" path="res://visuals/add-ons/dialogue.tscn" id="9_2csct"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rvrru"]
 texture = ExtResource("1_erdo8")
@@ -2354,9 +2355,9 @@ parameters/looping = true
 y_sort_enabled = true
 
 [node name="MainCharacter2" parent="Node2D" unique_id=1542135557 instance=ExtResource("6_rvrru")]
-position = Vector2(141.00006, 104.99994)
+position = Vector2(158, 131)
 rotation = -3.1415925
-scale = Vector2(2.1592128, -1.8656858)
+scale = Vector2(1.1214929, -0.9690352)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D" unique_id=221838646]
 y_sort_enabled = true
@@ -2370,4 +2371,8 @@ scale = Vector2(0.76888096, 0.7435449)
 allowInput = true
 showBar = true
 
+[node name="Dialogue" parent="." unique_id=1676656825 instance=ExtResource("9_2csct")]
+
 [connection signal="area_entered" from="nextRingArea" to="." method="_on_next_ring_area_area_entered"]
+[connection signal="enemy_died" from="Node2D/MainCharacter2" to="." method="_on_main_character_2_enemy_died"]
+[connection signal="enemy_died" from="Node2D/MainCharacter2" to="Node2D/MainCharacter" method="_on_main_character_2_enemy_died"]

@@ -1,27 +1,26 @@
 [gd_scene format=3 uid="uid://miaew01vcf15"]
 
 [ext_resource type="Script" uid="uid://dgc1g7u8j076" path="res://visuals/character/enemy_trial.gd" id="1_t8mbh"]
-[ext_resource type="Texture2D" uid="uid://djdxadb4dq7j" path="res://assets/images/male_animations/walking one-1.png.png" id="2_1l1m6"]
-[ext_resource type="Texture2D" uid="uid://k1op06gppmvr" path="res://assets/images/male_animations/walking one-2.png.png" id="3_vq2ip"]
-[ext_resource type="Texture2D" uid="uid://cv7f1s865qbsl" path="res://assets/images/male_animations/walking one-3.png.png" id="4_wvih3"]
-[ext_resource type="Texture2D" uid="uid://bfen7xvsc86ba" path="res://assets/images/male_animations/walking one-4.png.png" id="5_2kbui"]
+[ext_resource type="Texture2D" uid="uid://c4uffi4lou5yh" path="res://assets/images/mummies/sprite_0.png" id="2_t8mbh"]
+[ext_resource type="Texture2D" uid="uid://dew64puc0vq4b" path="res://assets/images/mummies/sprite_1.png" id="3_f7w3e"]
+[ext_resource type="Texture2D" uid="uid://bkgoniruwsb63" path="res://assets/images/mummies/sprite_2.png" id="4_1l1m6"]
+[ext_resource type="Texture2D" uid="uid://usl7e0yobqwv" path="res://assets/images/mummies/sprite_3.png" id="5_vq2ip"]
 [ext_resource type="Texture2D" uid="uid://dpqybgt45p6ko" path="res://assets/images/Alert_Sign.png" id="7_f7w3e"]
-[ext_resource type="PackedScene" uid="uid://dwer7a3mp75un" path="res://visuals/add-ons/health_bar.tscn" id="7_urc01"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_23vcb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_1l1m6")
+"texture": ExtResource("2_t8mbh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_vq2ip")
+"texture": ExtResource("3_f7w3e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_wvih3")
+"texture": ExtResource("4_1l1m6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_2kbui")
+"texture": ExtResource("5_vq2ip")
 }],
 "loop": 1,
 "name": &"default",
@@ -49,13 +48,6 @@ position = Vector2(-1, -13)
 sprite_frames = SubResource("SpriteFrames_23vcb")
 frame_progress = 0.025814964
 
-[node name="HealthBar" parent="." unique_id=1339644606 instance=ExtResource("7_urc01")]
-offset_left = -8.000004
-offset_top = -36.0
-offset_right = 62.999996
-offset_bottom = -9.0
-scale = Vector2(0.26708752, 0.26708752)
-
 [node name="Area2D" type="Area2D" parent="." unique_id=381738756]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2125541277]
@@ -67,7 +59,7 @@ shape = SubResource("RectangleShape2D_ih6pl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sight" unique_id=2066374994]
 position = Vector2(-1.9073486e-06, -9)
-scale = Vector2(3.102358, 3.0970387)
+scale = Vector2(3.7915921, 3.820142)
 shape = SubResource("CircleShape2D_ih6pl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=944705870]
@@ -79,7 +71,7 @@ shape = SubResource("RectangleShape2D_pea23")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damageRadius" unique_id=1648129884]
 position = Vector2(0.99999994, -13.000001)
-scale = Vector2(1.507332, 1.507332)
+scale = Vector2(1.9834796, 1.9834796)
 shape = SubResource("CircleShape2D_pea23")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=275600684]

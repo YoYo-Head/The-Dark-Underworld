@@ -3,26 +3,26 @@ extends CharacterBody2D
 var speed = 30
 var playingSound = false
 var knockback_velocity: Vector2 = Vector2.ZERO
+var damage = 1
 
 var isDead = false
 
-<<<<<<< HEAD
+@onready var progressBar = $ProgressBar
+
 @export var allowInput = false
 @export var showBar = false
 
-@export var maxHealth = 10
-@onready var currentHealth: int = 10
-=======
-@export var maxHealth = 30
-@onready var currentHealth: int = 30
->>>>>>> e1d0a12cf7b867b84fa9aa19687811f364ff3f40
+@export var maxHealth = 1
+@onready var currentHealth: int = 1
 
 func _physics_process(delta: float) -> void:
 	
+	progressBar.value = currentHealth
+	
 	if not showBar:
-		$HealthBar.visible = false
+		progressBar.visible = false
 	else:
-		$HealthBar.visible = true
+		progressBar.visible = true
 	
 	if allowInput:
 		handle_input()
@@ -87,7 +87,16 @@ func on_death():
 		
 	isDead = false
 	
+	maxHealth += 1
+	currentHealth = maxHealth
+	
+	progressBar.max_value = maxHealth
+	
 	teleport(Vector2(50, 50))
 	
 	currentHealth = maxHealth
 	
+
+
+func _on_main_character_2_enemy_died() -> void:
+	damage += 1

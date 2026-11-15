@@ -13,14 +13,29 @@ func _process(delta: float) -> void:
 	
 func appear_display_input_disappear(text):
 	self.visible = true
-	$VBoxContainer/Label.text = text + " [space to continue]"
+	$VBoxContainer/Label.text = text + " [B to continue]"
 	while true:
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_key_pressed(KEY_B):
 			break
 		else:
+			await get_tree().create_timer(1).timeout
+			
+			
+	$VBoxContainer/Label.text = ""
+	self.visible = false
+		
+func make_decision(text, optionA, optionB):
+	self.visible = true
+	$VBoxContainer/Label.text = text + " [C for " + optionA + " or V for " + optionB + "]"
+	
+	while true:
+		if Input.is_key_pressed(KEY_C):
+			return 0
+		elif Input.is_key_pressed(KEY_V):
+			return 1
+		else:
 			await get_tree().create_timer(0.1).timeout
-			
-			
-		$VBoxContainer/Label.text = ""
-		self.visible = false
+	$VBoxContainer/Label.text = ""
+	self.visible = false
+	
 	

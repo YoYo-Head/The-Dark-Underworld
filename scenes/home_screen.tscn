@@ -4,90 +4,42 @@
 [ext_resource type="Texture2D" uid="uid://dqkcra4suj3p6" path="res://assets/abu-assets/Abu-Visuals/home-page/Home-Page.png" id="2_bie51"]
 [ext_resource type="Texture2D" uid="uid://b5dfgu1a3odmq" path="res://assets/abu-assets/Abu-Visuals/home-page/Start BUTTON UI.png" id="3_ih2x6"]
 
-[node name="HomeScreen" type="Control" unique_id=923902017]
-layout_mode = 3
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1080.0
-offset_bottom = -750.0
+[node name="HomeScreen" type="Node2D" unique_id=1163590485]
 scale = Vector2(2.5636017, 2.9882267)
 script = ExtResource("1_tjifo")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1825935113]
-layout_mode = 0
+[node name="background" type="TextureRect" parent="." unique_id=1825935113]
 offset_right = 321.0
 offset_bottom = 242.0
-scale = Vector2(27.131199, 19.068035)
+scale = Vector2(1.3145739, 1.0565962)
+mouse_filter = 0
 texture = ExtResource("2_bie51")
 
-[node name="StartButton" type="TextureButton" parent="." unique_id=1567242539]
-layout_mode = 0
-offset_left = 3451.0044
-offset_top = 1645.7924
-offset_right = 3551.0044
-offset_bottom = 1677.7924
-scale = Vector2(19.262634, 19.262634)
+[node name="beginButton" type="TextureButton" parent="." unique_id=200298722]
+offset_left = 131.84575
+offset_top = 112.44128
+offset_right = 231.84575
+offset_bottom = 144.44128
+scale = Vector2(1.2366829, 1.8799945)
 texture_normal = ExtResource("3_ih2x6")
 
-[node name="TextureButton2" type="TextureButton" parent="." unique_id=1601904467]
-layout_mode = 0
-offset_left = 3463.0964
-offset_top = 2996.7605
-offset_right = 3563.0964
-offset_bottom = 3028.7605
-scale = Vector2(19.262634, 19.262634)
-texture_normal = ExtResource("3_ih2x6")
-
-[node name="TextureButton3" type="TextureButton" parent="." unique_id=200298722]
-layout_mode = 0
-offset_left = 3464.2666
-offset_top = 2315.0857
-offset_right = 3564.2666
-offset_bottom = 2347.0857
-scale = Vector2(19.262634, 19.262634)
-texture_normal = ExtResource("3_ih2x6")
-
-[node name="Start" type="Label" parent="." unique_id=1044282333]
-layout_mode = 0
-offset_left = 3963.9536
-offset_top = 1779.6506
-offset_right = 5068.6406
-offset_bottom = 2257.6506
-scale = Vector2(0.7722519, 0.7722519)
-mouse_filter = 0
+[node name="text" type="Label" parent="." unique_id=1455911413]
+offset_left = 148.22894
+offset_top = 112.44127
+offset_right = 1577.2292
+offset_bottom = 590.4413
+scale = Vector2(0.088068195, 0.12741226)
 theme_override_font_sizes/font_size = 350
 text = "BEGIN"
 
-[node name="Settings" type="Label" parent="." unique_id=1723721837]
-layout_mode = 0
-offset_left = 3867.2158
-offset_top = 3085.1074
-offset_right = 5222.216
-offset_bottom = 3563.1074
-scale = Vector2(0.7722519, 0.7722519)
-mouse_filter = 0
-theme_override_font_sizes/font_size = 350
-text = "Settings"
-
-[node name="Controls" type="Label" parent="." unique_id=1455911413]
-layout_mode = 0
-offset_left = 3853.1726
-offset_top = 2426.8572
-offset_right = 5282.173
-offset_bottom = 2904.8572
-scale = Vector2(0.7722519, 0.7722519)
-mouse_filter = 0
-theme_override_font_sizes/font_size = 350
-text = "Controls"
-
-[node name="Controls2" type="Label" parent="." unique_id=974284826]
-layout_mode = 0
-offset_left = 1697.6116
-offset_top = 472.8557
-offset_right = 8854.611
-offset_bottom = 1708.8557
-scale = Vector2(0.7722519, 0.7722519)
-mouse_filter = 0
+[node name="heading" type="Label" parent="." unique_id=974284826]
+offset_left = 112.34196
+offset_top = 40.157597
+offset_right = 7269.342
+offset_bottom = 1276.1576
+scale = Vector2(0.026921513, 0.026921513)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 900
 text = "Grimmy's Deal 🂱"
+
+[connection signal="pressed" from="beginButton" to="." method="_on_begin_button_pressed"]

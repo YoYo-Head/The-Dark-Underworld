@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bcr4qgynnlidm"]
+
+[ext_resource type="Texture2D" uid="uid://cw2fntv6cvmkj" path="res://assets/images/New Piskel-1.png.png" id="1_2b04v"]
+
+[node name="GrimReaper" type="CharacterBody2D" unique_id=686877873]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=537323016]
+texture = ExtResource("1_2b04v")
